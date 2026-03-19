@@ -1,14 +1,13 @@
+version: "3.9"
 
 services:
-
   mariadb:
     build: ./requirements/mariadb
     container_name: mariadb
     restart: always
+    env_file: .env
     volumes:
       - mariadb_data:/var/lib/mysql
-    env_file: 
-      - .env
     networks:
       - inception
 
@@ -18,10 +17,9 @@ services:
     restart: always
     depends_on:
       - mariadb
+    env_file: .env
     volumes:
       - wordpress_data:/var/www/html
-    env_file: 
-      - .env
     networks:
       - inception
 
@@ -31,24 +29,29 @@ services:
     restart: always
     depends_on:
       - wordpress
+    env_file: .env
     ports:
       - "443:443"
     volumes:
       - wordpress_data:/var/www/html
-    env_file: 
-      - .env
     networks:
       - inception
 
 volumes:
-
   mariadb_data:
     driver: local
+    driver_opts:
+      type: none
+      device: /home/kikwasni/data/mariadb
+      o: bind
 
   wordpress_data:
     driver: local
+    driver_opts:
+      type: none
+      device: /home/kikwasni/data/wordpress
+      o: bind
 
 networks:
-
   inception:
     driver: bridge

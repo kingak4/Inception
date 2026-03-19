@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ ! -f /etc/ssl/certs/nginx.crt ]; then
-    openssl req -x509 -nodes -days 365 \
-        -subj "/CN=localhost" \
-        -newkey rsa:2048 \
-        -keyout /etc/ssl/private/nginx.key \
-        -out /etc/ssl/certs/nginx.crt
-fi
+mkdir -p /etc/ssl/private /etc/ssl/certs
 
-nginx -g "daemon off;"
+openssl req -x509 -nodes -days 365 \
+-subj "/CN=$DOMAIN_NAME" \
+-newkey rsa:2048 \
+-keyout /etc/ssl/private/nginx.key \
+-out /etc/ssl/certs/nginx.crt
+
+exec nginx -g "daemon off;"
