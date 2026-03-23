@@ -1,4 +1,4 @@
-FROM debian:12-slim
+FROM debian:bullseye
 
 RUN apt-get update && apt-get install -y \
     php-fpm \
@@ -20,8 +20,6 @@ RUN wget https://wordpress.org/latest.tar.gz && \
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
     chmod +x wp-cli.phar && \
     mv wp-cli.phar /usr/local/bin/wp
-
-COPY wp-config.php /wp-config.php
 
 COPY setup.sh /setup.sh
 RUN chmod +x /setup.sh
