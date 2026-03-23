@@ -28,7 +28,7 @@ The project uses a Makefile to simplify Docker Compose commands:
 
 | Command       | Description |
 |---------------|-------------|
-| `make setup`  | Initializes host directories for data binding. |
+| `make create`  | Initializes host directories for data binding and sets up /etc/hosts entry. |
 | `make build`  | Builds Docker images from each service’s Dockerfile. |
 | `make up`     | Runs `setup`, `build`, and starts the containers in detached mode (`docker compose up -d`). |
 
