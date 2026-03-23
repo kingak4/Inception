@@ -25,6 +25,19 @@ To enable local domain resolution, add the following entry to your `/etc/hosts` 
 
 127.0.0.1 kikwasni.42.fr
 
+Before running make up, copy the example environment file and set your own credentials:
+```bash
+cp srcs/.env_example srcs/.env
+```
+Then open srcs/.env and update the following variables with your own secure passwords and usernames:
+
+- `MYSQL_ROOT_PASSWORD`
+- `MYSQL_USER`
+- `MYSQL_PASSWORD`
+- `WORDPRESS_DB_PASSWORD`
+
+This ensures your sensitive data is stored safely and the services will start correctly.
+
 ---
 
 ### 🚀 Build and Launch
