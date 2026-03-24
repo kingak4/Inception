@@ -2,21 +2,21 @@
 
 ## 1. Environment Setup from Scratch
 
-**Prerequisites:**  
+**Prerequisites:** 
 Ensure the following are installed on your host system:
 
-- Docker  
-- Docker Compose  
-- make  
+- Docker 
+- Docker Compose 
+- make 
 
-**Project Configuration:**  
+**Project Configuration:** 
 
-1. Create a `.env` file at the root of the repository.  
-2. Fill in the required environment variables, e.g.:  
-   - `MYSQL_ROOT_PASSWORD`  
-   - `MYSQL_USER`  
-   - `MYSQL_PASSWORD`  
-   - `WORDPRESS_DB_PASSWORD`  
+1. Create a `.env` file at the root of the repository. 
+2. Fill in the required environment variables, e.g.: 
+   - `MYSQL_ROOT_PASSWORD` 
+   - `MYSQL_USER` 
+   - `MYSQL_PASSWORD` 
+   - `WORDPRESS_DB_PASSWORD` 
 3. Map the local IP to your test domain in `/etc/hosts`, e.g.:  127.0.0.1 kikwasni.42.fr
 
 
@@ -48,6 +48,6 @@ The project uses a Makefile to simplify Docker Compose commands:
 
 ## 4. Data Storage and Persistence
 
-- **WordPress Files:** volume `wp_data`, mapped to `/home/<kikwasni>/data/wp`.  
-- **Database Content:** volume `db_data`, mapped to `/home/<kikwasni>/data/db`.  
+- **WordPress Files:** volume `wp_data`, mapped to `/home/<kikwasni>/data/wp`. 
+- **Database Content:** volume `db_data`, mapped to `/home/<kikwasni>/data/db`. 
 - Both volumes must be named and configured via `driver_opts` to persist data across rebuilds.
