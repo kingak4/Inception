@@ -6,8 +6,8 @@
 
 
 ## 📌 Description
-The Inception project is a system administration exercise designed to broaden knowledge of virtualization using Docker.  
-Its goal is to set up a small, functional infrastructure on a personal Virtual Machine, using a multi-container architecture where each service runs in its dedicated, isolated container.  
+The Inception project is a system administration exercise designed to broaden knowledge of virtualization using Docker. 
+Its goal is to set up a small, functional infrastructure on a personal Virtual Machine, using a multi-container architecture where each service runs in its dedicated, isolated container. 
 
 This project includes:
 - **NGINX** container as the entry point with TLSv1.2 or TLSv1.3.
@@ -42,7 +42,7 @@ This ensures your sensitive data is stored safely and the services will start co
 
 ### 🚀 Build and Launch
 
-The project includes a Makefile that automates the full deployment process.  
+The project includes a Makefile that automates the full deployment process. 
 It prepares the required data directories, builds all Docker images, and starts the containers in detached mode.
 ```bash
 make up
@@ -98,20 +98,20 @@ Bind mounts link to a specific host path, while Docker Named Volumes are managed
 
 
 ### Video Tutorials
-- **Docker Networking Fundamentals**  
-  https://www.youtube.com/watch?v=bKFMS5C4CG0  
+- **Docker Networking Fundamentals** 
+  https://www.youtube.com/watch?v=bKFMS5C4CG0 
   High‑level explanation of Docker networking concepts and how container networks work.
 
-- **Docker Crash Course for Beginners**  
-  https://www.youtube.com/watch?v=pg19Z8LL06w  
+- **Docker Crash Course for Beginners** 
+  https://www.youtube.com/watch?v=pg19Z8LL06w 
   Introductory crash course covering Docker basics for absolute beginners.
 
 ## AI Usage
 
 AI was used to support the project in the following ways:
 
-- **Assistance in writing necessary documentation**, including USER_DOC.md and DEV_DOC.md.  
-- **Guidance on Docker concepts and best practices**, such as container isolation, named volumes, environment variables, Docker networking, and TLS configuration.  
+- **Assistance in writing necessary documentation**, including USER_DOC.md and DEV_DOC.md. 
+- **Guidance on Docker concepts and best practices**, such as container isolation, named volumes, environment variables, Docker networking, and TLS configuration. 
 - **Learning testing and debugging of Docker setups**, helping to understand how to validate configurations and inspect container behavior.
 
 All AI-generated suggestions were critically reviewed and adapted to the project, ensuring accuracy and proper understanding of Docker and project-specific concepts.

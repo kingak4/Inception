@@ -10,7 +10,6 @@ fi
 mariadbd-safe --datadir='/var/lib/mysql' --skip-networking &
 
 until mariadb-admin --socket=/run/mysqld/mysqld.sock ping; do
-    echo "Czekam na uruchomienie MariaDB..."
     sleep 2
 done
 
